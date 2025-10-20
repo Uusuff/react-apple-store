@@ -1,21 +1,19 @@
-import React from 'react';
+import { Outlet } from 'react-router-dom';
+import { Header } from './modules/Header';
+import { Footer } from './modules/Footer';
+import { ProductsProvider } from './shared/context/ProductsContext';
+import './styles/resetStyles.scss';
 import './App.scss';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
-
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
-
-export const App: React.FC = () => {
-  return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
+export const App = () => (
+  <ProductsProvider>
+    <div className="app">
+      <Header />
+      <main className="main-content">
+        <h1 className="title_visually_hidden">Product Catalog</h1>
+        <Outlet />
+      </main>
+      <Footer />
     </div>
-  );
-};
+  </ProductsProvider>
+);
