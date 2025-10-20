@@ -1,10 +1,14 @@
 📸 Screenshot
 
-- ![Preview](./src/images/preview.png)
+- ![Preview](./src/assets/images/preview.png)
+
+---
 
 🌐 Demo
 
 - [DEMO LINK](https://Uusuff.github.io/react-apple-store/)
+
+---
 
 # React Phone Catalog
 
@@ -55,6 +59,8 @@ src/
 
 ```
 
+---
+
 ## 💻 Installation & Local Run
 
 1. Clone the repo:
@@ -80,3 +86,5 @@ npm install
 npm start
 
 ```
+
+---
